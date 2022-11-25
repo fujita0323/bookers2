@@ -1,0 +1,22 @@
+<h1>Books</h1>
+ <% @books.each do |book| %>
+ 
+ <div>
+  <!--詳細画面へとぶURL-->
+  <%= link_to book_path(book.id) do %>
+  <%= image_tag book.get_image %>
+  <% end %>
+
+ <!--<p>User</p>-->
+ <!--<span><%= image_tag 'sample-author1.jpg' %></span>-->
+ 
+ <p>Title</p>
+ <span><%= book.title %></span>
+ 
+ <p>Opinion</p>
+ <span><%= book.body %></span>
+ 
+  </div>
+ <% end %>
+
+<!--多分label使う？-->
