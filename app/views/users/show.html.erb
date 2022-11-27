@@ -1,9 +1,10 @@
 <div>
   <h3><%= @user.name %></h3>
   <%= image_tag @user.get_profile_image(100, 100) %>
+  <p><%= link_to "Edit", edit_user_path(@user.id) %></p>
 </div>
 
- <% @books.each do |book| %>
+ <% @book.each do |book| %>
 
 <div>
   <%= link_to book_path(book.id) do %>
